@@ -13,10 +13,9 @@ pipeline {
         stage('checkout') {
             steps {
                  script{
-                        dir("terraform")
-                        {
+                        dir("terraform") {
                             git branch: 'main',
-                            git "https://github.com/achrafaboulakjam/Terraform_aws.git"
+                                url: 'https://github.com/achrafaboulakjam/Terraform_aws.git'
                         }
                     }
                 }
